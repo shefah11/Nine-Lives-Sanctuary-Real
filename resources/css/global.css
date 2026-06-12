@@ -1,0 +1,223 @@
+/* ===== NINE LIVES SANCTUARY THEME ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFDF9;  /* Soft warm white */
+    color: #4A3B32;  /* Warm dark brown for text */
+    line-height: 1.6;
+}
+
+/* Container - Centers content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #E8A35E;  /* Soft orange/coral - cat friendly */
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A3B32;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #E8A35E;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    color: #E8A35E;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BUTTONS (Matches mockups) ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background-color: #E8A35E;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #D4914A;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #E8A35E;
+    color: #E8A35E;
+}
+
+.btn-outline:hover {
+    background-color: #E8A35E;
+    color: white;
+}
+
+/* ===== CARDS (For adoption gallery - Page 13) ===== */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4A3B32;
+    margin-bottom: 5px;
+}
+
+/* ===== THREE COLUMN LAYOUT (For "Why adopt?" - Page 12) ===== */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+/* ===== FORMS (For Report & Adoption - Pages 15, 18) ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4A3B32;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E0D6CC;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #E8A35E;
+    box-shadow: 0 0 0 3px rgba(232, 163, 94, 0.1);
+}
+
+/* ===== HERO SECTION (Page 11) ===== */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #FFF5E8 0%, #FFFDF9 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #4A3B32;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #6B5B4F;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #4A3B32;
+    color: #FFFDF9;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+/* ===== RESPONSIVE (Mobile friendly) ===== */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
